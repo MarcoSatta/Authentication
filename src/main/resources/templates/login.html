@@ -20,15 +20,15 @@
             <div class="container">
                 <div class="form">
                     <h2>Login Form</h2>
-                    <form>
+                    <form action="/home" method="get" class="inputBox">
                         <div class="inputBox">
-                            <input type="text" placeholder="Username">
+                            <input type="text" placeholder="Username" required minlength="5" maxlength="12" size="14">
                         </div>
                         <div class="inputBox">
-                            <input type="password" placeholder="Password">
+                            <input type="password" placeholder="Password" required minlength="8" maxlength="12" size="14">
                         </div>
                         <div class="inputBox">
-                            <input type="submit" value="Login">
+                            <input type="submit" value="Login" >
                         </div>
                         <p class="forget">Forgot Password ? <a href="#">Click Here</a></p>
                         <p class="forget">Don't have an account ? <a href="#">Sign up</a></p>
