@@ -20,12 +20,18 @@
             <div class="container">
                 <div class="form">
                     <h2>Login Form</h2>
-                    <form action="/home" method="get" class="inputBox">
+                    <div th:if="${param.error}">
+                        Invalid username and password.
+                    </div>
+                    <div th:if="${param.logout}">
+                        You have been logged out.
+                    </div>
+                    <form th:action="@{/login}" method="post">
                         <div class="inputBox">
-                            <input type="text" placeholder="Username" required minlength="5" maxlength="12" size="14">
+                            <input type="text" name="username" placeholder="Username" required minlength="4" maxlength="12" size="14">
                         </div>
                         <div class="inputBox">
-                            <input type="password" placeholder="Password" required minlength="8" maxlength="12" size="14">
+                            <input type="password" name="password" placeholder="Password" required minlength="8" maxlength="12" size="14">
                         </div>
                         <div class="inputBox">
                             <input type="submit" value="Login" >
