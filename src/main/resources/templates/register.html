@@ -19,25 +19,17 @@
             <div class="square" style="--i:4;"></div>
             <div class="container">
                 <div class="form">
-                    <h2>Login Form</h2>
-                    <div th:if="${param.error}">
-                        Invalid username and password.
-                    </div>
-                    <div th:if="${param.logout}">
-                        You have been logged out.
-                    </div>
-                    <form th:action="@{/login}" method="post">
+                    <h2>Register Form</h2>
+                    <form th:action="@{/register}" method="post">
                         <div class="inputBox">
-                            <input type="text" name="username" placeholder="Username" required minlength="4" maxlength="12" size="14">
+                            <input type="text" name="username" placeholder="New Username" required minlength="4" maxlength="12" size="14">
                         </div>
                         <div class="inputBox">
-                            <input type="password" name="password" placeholder="Password" required minlength="8" maxlength="12" size="14">
+                            <input type="password" name="password" placeholder="New Password" required minlength="8" maxlength="12" size="14">
                         </div>
                         <div class="inputBox">
-                            <input type="submit" value="Login" >
+                            <input type="submit" value="Register" >
                         </div>
-                        <p class="forget">Forgot Password ? <a href="#">Click Here</a></p>
-                        <p class="forget">Don't have an account ? <a href="/register">Sign up</a></p>
                     </form>
                 </div>
             </div>

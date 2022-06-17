@@ -14,18 +14,12 @@ public class user {
   private String username;
   private String password;
 
-  protected user() {}
-
-  public user(String username, String password) {
-    this.username = username;
-    this.password = password;
+  public void setId(Long id) {
+    this.id = id;
   }
 
-  @Override
-  public String toString() {
-    return String.format(
-        "user[id=%d, username='%s', password='%s']",
-        id, username, password);
+  public void setusername(String username) {
+    this.username = username;
   }
 
   public Long getId() {
@@ -39,4 +33,8 @@ public class user {
   public String getpassword() {
     return password;
   }
+
+  public void setpassword(String password) {
+    this.password = password;
+}
 }
