@@ -1,7 +1,9 @@
 package com.example.auth.accessingdatajpa;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface userRepository extends CrudRepository<user, Long> {
+@Repository
+public interface UserRepository extends CrudRepository<UserEntity, Long> {
 
 }
